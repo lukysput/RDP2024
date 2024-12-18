@@ -8,7 +8,7 @@ pekerjaan :
  - nama : Unduh 
     jalankan :Invoke-WebRequest -Uri https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok-v3-stable-windows-amd64.zip
  - nama: Ekstrak 
-    jalankan: Perluas-Arsipkan ngrok.zip
+    jalankan: Expand-Archive .\ngrok-v3-stable-windows-amd64.zip -DestinationPath .\
  - nama: Otentikasi 
     jalankan: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN 
     env: NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }} 
